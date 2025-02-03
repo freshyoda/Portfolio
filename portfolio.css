@@ -6,6 +6,9 @@
 }
 
 body{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
     font-size: 16px;
     line-height: 1.5;
     /* background: #1f242d; */
@@ -33,6 +36,13 @@ a{
     /* opacity and visibilty both for smooth transition */
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+}
+
+@media (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @keyframes show-content {
@@ -72,10 +82,14 @@ a{
     align-items: center;
     border-radius: 0;
     vertical-align: middle;
+    appearance: none;
     -moz-appearance: none;
     justify-content: center;
     text-decoration: none;
     -moz-user-select: none;
+    user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
     background-color: transparent;
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent;
@@ -89,7 +103,7 @@ a{
   }
   @media print {
     .MuiButtonBase-root {
-      color-adjust: exact;
+        print-color-adjust: exact;
     }
   }
   
@@ -106,6 +120,7 @@ a{
 }
 
 .home {
+    max-width: 100%;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -130,9 +145,48 @@ a{
 }
 
 .home-info h2 {
+    display: flex;
     position: relative;
     overflow: hidden; /* Ensures only one span is visible at a time */
     height: 40px; /* Adjust this to match the font size */
+}
+
+@media (max-width:768px){
+    .home-info h4{
+        display: none;
+
+    }
+}
+
+@media (max-width:768px){
+    .home-info h1{
+    /* font-size: large; */
+    margin-bottom: 75px;
+
+    }
+}
+
+
+@media (max-width:768px){
+    .home-info h2{
+    /* font-size: large; */
+    /* margin-bottom: 100px; */
+    flex-direction: column;
+       
+    }
+}
+@media (max-width:768px){
+    .home-info .btn-sci {
+        position: relative;
+    /* font-size: large; */
+    /* margin-bottom: 100px; */
+    flex-direction: row;
+ /* margin-left: 100px; */
+ justify-content: center;
+ align-items: center;
+ margin-top: 70px;
+ /* margin-left: 70px; */
+    }
 }
 
 .home-info h2 span {
@@ -148,6 +202,18 @@ a{
     transform: translateY(100%); /* Start off below the visible area */
     animation: display-text 9s linear infinite;
 }
+
+@media (max-width:768px){
+    .home-info h2{
+    /* font-size: large; */
+    padding:  50px 0 ;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    display: inline;
+    }
+}
+
 
 .home-info h2 span:nth-child(1) {
     animation-delay: 0s;
@@ -276,6 +342,7 @@ a{
     overflow: hidden;
 }
 
+
 .home-img .img-box::before,
 .home-img .img-box::after
 {
@@ -310,6 +377,16 @@ a{
     justify-content: center;
     overflow: hidden;
 }
+
+@media (max-width:768px){
+    .home-img {
+    /* font-size: large; */
+    /* margin-bottom: 100px; */
+    margin-bottom: 300px;
+        /* margin-right: 70px; */
+    }
+}
+
 
 .home-img .img-box .img-item img{
     margin-top: 30px;
