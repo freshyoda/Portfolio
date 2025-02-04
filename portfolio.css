@@ -174,7 +174,8 @@ a{
 @media (max-width:768px){
     .home-info h1{
     /* font-size: large; */
-    margin-bottom: 75px;
+    margin-bottom: 35px;
+    padding: 10px;
 
     }
 }
